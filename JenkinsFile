@@ -4,7 +4,7 @@ node{
   
 echo "job name is :$JOB_NAME"
 echo "node name is :$NODE_NAME"
-echo "jenkins home is :$JENKINS_HOME"
+
   
   properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([pollSCM('* * * * *')])])
   
